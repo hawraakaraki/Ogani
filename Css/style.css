@@ -1,0 +1,130 @@
+:root {
+    --main-color : #7fad39;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+i {
+    font-size: 14px;
+}
+.container {
+width: 1200px;
+margin: 0 auto;
+}
+.top-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 16px;
+}
+.top-header {
+    background-color: #f5f5f5;
+    padding: 1rem 0 ;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+}
+.header-left span.email {
+    padding-left: 5px;
+    position: relative;
+}
+.header-left span.email::after {
+content: "";
+width: 1px;
+height: 20px;
+background-color: black;
+position: absolute;
+right: -27px;
+top: 2px;
+opacity: 0.1;
+}
+.header-right {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 2rem;
+    
+}
+.header-right .icons {
+display: flex;
+gap: 1rem;
+font-size: 15px;
+position: relative;
+}
+.header-right .icons a {
+ color: black;
+}
+.header-right .icons::after {
+    content: "";
+    width: 1px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    right: -20px;
+    top: 1px;
+    opacity: 0.1;
+}
+.header-right .language {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+   gap: 0.5rem;
+    width: 100px;
+}
+.header-right .language img {
+margin-right: 5px ;
+}
+
+.header-right .language ul  {
+    visibility: hidden;
+    background-color: #252525;
+    position: absolute;
+    top: 20px;
+    transition: all 0.3s;
+     width: 110px;
+     padding: 10px 0  ;
+}
+.header-right .language ul a {
+color: white;
+font-size: 14px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 4px 0;
+}
+.header-right .language:hover ul {
+    visibility: visible;
+    top: 10px;
+}
+.header-right .language i {
+    color: gray;
+}
+.header-right .language::after {
+    content: "";
+    width: 1px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    right: -27px;
+    top: 2px;
+    opacity: 0.1;
+}
+.header-right .users i {
+    padding-right: 4px ;
+    padding-left: 6px;
+}
