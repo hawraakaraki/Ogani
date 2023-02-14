@@ -26,7 +26,7 @@ i {
 }
 
 .container {
-    width: 1200px;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -45,7 +45,6 @@ i {
     display: flex;
     align-items: center;
     gap: 3rem;
-
 }
 
 .header-left span.email {
@@ -70,7 +69,6 @@ i {
     position: relative;
     align-items: center;
     gap: 2rem;
-
 }
 
 .header-right .icons {
@@ -159,6 +157,7 @@ i {
 /* secound Header */
 .bottom-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
 }
@@ -167,7 +166,10 @@ i {
     width: 26%;
     cursor: pointer;
 }
-
+.bottom-header .fa-bars {
+    font-size: 40px;
+    color: var(--main-color);
+}
 .bottom-header .navbar {
     width: 70%;
     display: flex;
@@ -226,23 +228,30 @@ i {
     top: 25px;
 }
 
-.bottom-header .navbar .whishlist {
+.whishlist
+, .whishlist-mob {
     display: flex;
     align-items: center;
     gap: 1.5rem;
 }
-
-.bottom-header .whishlist .whishlist-icons {
+ .whishlist-mob {
+    margin-bottom: 2rem;
+    justify-content: center;
+ }
+ .whishlist .whishlist-icons ,
+  .whishlist-mob .whishlist-icons {
     display: flex;
     gap: 1.5rem;
 }
 
-.bottom-header .whishlist .whishlist-icons a {
+ .whishlist .whishlist-icons a ,
+  .whishlist-mob .whishlist-icons a {
     position: relative;
     color: #252525;
 }
 
-.bottom-header .whishlist .whishlist-icons a span {
+ .whishlist .whishlist-icons a span ,
+ .whishlist-mob .whishlist-icons a span{
     background-color: #7fad39;
     position: absolute;
     border-radius: 50%;
@@ -256,12 +265,14 @@ i {
     font-weight: bold;
 }
 
-.bottom-header .whishlist .items span {
+.whishlist .items span , 
+.whishlist-mob .items span {
     font-size: 14px;
     color: #6f6f6f;
 }
 
-.bottom-header .whishlist .items strong {
+.whishlist .items strong ,
+.whishlist-mob .items strong {
     color: var(--secondary);
     font-size: 16px;
 }
@@ -269,14 +280,12 @@ i {
 .main-menu {
     display: flex;
     align-content: flex-start;
-    justify-content: flex-start;
-    gap: 2rem;
+    justify-content: space-between;
 }
 
 .main-menu .menu {
     width: 23%;
     cursor: pointer;
-
 }
 
 .main-menu .menu .menu-button {
@@ -288,7 +297,6 @@ i {
     padding: 0.9rem 0;
     color: white;
     cursor: pointer;
-
 }
 
 .main-menu .menu .menu-button span {
@@ -296,12 +304,11 @@ i {
 }
 
 .main-menu .slider {
-    width: 70%;
+    width: 72%;
 }
 
 .main-menu .menu .playlist ul li {
-    padding: 0.5rem 3rem;
-
+    padding: 0.55rem 3rem;
 }
 
 .main-menu .menu .playlist ul li:hover {
@@ -312,6 +319,7 @@ i {
     color: var(--secondary);
     font-size: 15px;
     font-weight: bold;
+    display: block;
 }
 
 .main-menu .menu .playlist ul li:hover a {
@@ -320,64 +328,69 @@ i {
 
 .main-menu .menu .playlist {
     border: 1px solid #eee;
-    visibility: hidden;
+    /* visibility: hidden;
+     */
     transition: 0.5s;
 }
 
 .main-menu .menu:hover .playlist {
-    visibility: visible;
+    /* visibility: visible;
+     */
 }
 
 .main-menu .slider .search-menu {
     display: flex;
-    gap: 1rem;
     justify-content: space-between;
 }
 
 .main-menu .slider .search-menu .search-form {
-    width: 570px;
+    width: 550px;
     height: 50px;
     border: 1px solid #eee;
     display: flex;
     align-items: center;
     position: relative;
-  padding: 0;
+    padding: 0;
 }
-.main-menu .slider .search-menu .search-form > span {
-font-weight: bold;
-padding-left: 1rem;
-position: relative;
+
+.main-menu .slider .search-menu .search-form>span {
+    font-weight: bold;
+    padding-left: 1rem;
+    position: relative;
 }
-.main-menu .slider .search-menu .search-form > span::after {
-      content: "";
-        width: 1px;
-        height: 20px;
-        background-color: var(--secondary);
-        position: absolute;
-        right: -70px;
-        top: 1px;
-        opacity: 0.1;
+
+.main-menu .slider .search-menu .search-form>span::after {
+    content: "";
+    width: 1px;
+    height: 20px;
+    background-color: var(--secondary);
+    position: absolute;
+    right: -70px;
+    top: 1px;
+    opacity: 0.1;
 }
+
 .slider .search-menu .search-form i {
     color: #6f6f6f;
     padding: 0 2rem;
-    
 }
+
 .slider .search-menu .search-form input {
     border: none;
     font-size: 1rem;
     color: #b2b2b2;
-    font-family: 'Cairo' ;
-   
-   
+    font-family: 'Cairo';
 }
+
 .slider .search-menu .search-form input::placeholder {
     color: #b2b2b2;
 }
+
 .slider .search-menu .search-form button {
     background-color: var(--main-color);
     border: none;
-    padding: 1rem 2rem;
+    height: 50px;
+    padding: 0 2rem;
     position: absolute;
     font-weight: bold;
     color: white;
@@ -387,32 +400,173 @@ position: relative;
     text-transform: uppercase;
     cursor: pointer;
 }
+
 .search-form input:focus {
     outline: none;
 }
+
 .slider .search-menu .support {
-display: flex;
-align-items: center;
-gap : 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
+
 .slider .search-menu .support .support-call {
     background-color: #f5F5F5;
     padding: 1.2rem;
+    margin: 0 1rem;
     border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--main-color);
 }
-.support-number-time span  {
+
+.support-number-time span {
     display: block;
     line-height: 2;
+    width: 130px;
 }
-.support .support-number {
 
-font-weight: bold;
+.support .support-number {
+    font-weight: bold;
 }
- .support .support-time {
+
+.support .support-time {
     color: #6f6f6f;
     font-size: 12px;
 }
+
+.mainmenu-banner {
+    margin-top: 1rem;
+    background-image: url(/img/hero/banner.jpg);
+    height: 400px;
+    width: 100%;
+    background-position: top center;
+    background-size: cover;
+}
+
+.main-banner {
+    padding: 6rem 4rem;
+}
+
+.main-banner span {
+    color: var(--main-color);
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 5px;
+}
+
+.main-banner h1 {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 1rem;
+    color: var(--secondary);
+}
+
+.main-banner p {
+    color: #6f6f6f;
+    font-size: 15px;
+    word-spacing: 0.1rem;
+}
+
+.main-banner button {
+    border: none;
+    color: white;
+    font-size: 14px;
+    width: 140px;
+    height: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 2rem;
+    display: block;
+    background-color: var(--main-color);
+}
+    /* responsive design */
+ @media screen and (min-width: 991px) {
+     .burger .fa-bars {
+         display: none;
+     }
+     .whishlist-mob {
+        display: none;
+     }
+ }
+  @media screen and (max-width: 992px) {
+    .container {
+            padding: 0 1rem;
+        }
+    .top-header {
+            display: none;
+        }
+    
+        .bottom-header .navbar .nav {
+            display: none;
+        }
+           .main-menu {
+            display: block;
+           }
+    
+           .main-menu .menu {
+               width: 100%;
+               margin-bottom: 2rem;
+           }
+    
+           .main-menu .slider {
+               width: 100%;
+           }
+            .main-menu .slider .search-menu {
+                display: block;
+            }
+
+            .main-menu .slider .search-menu .search-form {
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+
+            .main-menu .slider .support {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        .bottom-header {
+            display: flex;
+justify-content: space-evenly;
+overflow: hidden;
+        }
+        .bottom-header .logo {
+width: 100%;
+
+        }
+        .bottom-header .navbar {
+            width: 0%;
+        }
+                .main-banner {
+                    padding: 3rem auto;
+                }
+    .main-banner h1 {
+        font-size: 30px;
+        line-height: 0.5;
+    }
+  }
+        @media screen and (max-width: 530px) {
+                .main-menu .slider .search-menu .search-form {
+                        width: 100%;
+                    }
+                
+                    .slider .search-menu .search-form button {
+                        padding: 0 1rem;
+                        height: 50px;
+                    }
+                
+                    .main-menu .slider .search-menu .search-form>span {
+                        font-size: 0.8rem;
+                    }
+                
+                    .main-menu .slider .search-menu .search-form>span::after {
+                        right: -25px;
+                    }
+                
+                    .slider .search-menu .search-form i {
+                        padding: 0 0.5rem;
+                    }
+        }
