@@ -439,7 +439,7 @@ i {
 
 .mainmenu-banner {
     margin-top: 1rem;
-    background-image: url(/img/hero/banner.jpg);
+    background-image: url(../img/hero/banner.jpg);
     height: 400px;
     width: 100%;
     background-position: top center;
