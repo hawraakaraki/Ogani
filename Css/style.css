@@ -173,9 +173,7 @@ i {
     cursor: pointer;
 }
 
-.bottom-header .fa-bars:hover .humberger-menu-overlay {
-    visibility: visible;
-}
+
 
 .bottom-header .navbar {
     width: 70%;
@@ -338,14 +336,10 @@ i {
 
 .main-menu .menu .playlist {
     border: 1px solid #eee;
-     display: none;
+     display: block;
     transition: 0.5s;
 }
 
-.main-menu .menu:hover .playlist{
-    display: block;
-    
-}
 
 .main-menu .slider .search-menu {
     display: flex;
@@ -493,7 +487,7 @@ i {
 }
 
 /* responsive design */
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 1099px) {
     .burger .fa-bars {
         display: none;
     }
@@ -507,7 +501,7 @@ i {
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1100px) {
     .container {
         padding: 0 1rem;
     }
@@ -528,7 +522,16 @@ i {
         width: 100%;
         margin-bottom: 2rem;
     }
-
+        .main-menu .menu .playlist {
+        
+            display: none;
+            transition: 0.5s;
+        }
+    
+        .main-menu .menu:hover .playlist {
+            display: block;
+    
+        }
     .main-menu .slider {
         width: 100%;
     }
@@ -621,7 +624,9 @@ i {
     display: none;
     transition: all 0.3s;
 }
-
+/* .bottom-header .fa-bars:hover .humberger-menu-wrapper{
+    display: block;
+} */
 .humberger_menu_nav {
     display: flex;
     align-items: center;
@@ -671,4 +676,67 @@ i {
 .humberger_menu_parg .first {
     padding-bottom: 0.5rem;
     font-weight: bold;
+}
+/*categories*/
+.categories {
+padding: 2rem 0;
+}
+.categories .wrapper {
+display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+.categories .items{
+position: relative;
+height: 380px;
+background-position: top center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+.categories .slider1 {
+background-image: url(../img/categories/cat-1.jpg);
+}
+.categories .slider2 {
+    background-image: url(../img/categories/cat-2.jpg);
+}
+.categories .slider3 {
+    background-image: url(../img/categories/cat-3.jpg);
+}
+.categories .slider4 {
+    background-image: url(../img/categories/cat-4.jpg);
+}
+.categories .slider5 {
+    background-image: url(../img/categories/cat-5.jpg);
+}
+.categories .items h5 {
+position: absolute;
+bottom: 2px;
+width: 100%;
+text-align: center;
+
+}
+.categories .items h5 a{
+    color: var(--main-color);
+    text-transform: uppercase;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+background-color: white;
+}
+.main-title {
+text-align: center;
+text-transform: uppercase;
+padding: 1rem 0;
+position: relative;
+}
+.main-title::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 50px;
+    text-align: center;
+    bottom: 3px;
+    left: 48%;
+    background-color: var(--main-color);
 }
