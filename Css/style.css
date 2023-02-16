@@ -336,7 +336,7 @@ i {
 
 .main-menu .menu .playlist {
     border: 1px solid #eee;
-     display: block;
+    display: block;
     transition: 0.5s;
 }
 
@@ -522,16 +522,18 @@ i {
         width: 100%;
         margin-bottom: 2rem;
     }
-        .main-menu .menu .playlist {
-        
-            display: none;
-            transition: 0.5s;
-        }
-    
-        .main-menu .menu:hover .playlist {
-            display: block;
-    
-        }
+
+    .main-menu .menu .playlist {
+
+        display: none;
+        transition: 0.5s;
+    }
+
+    .main-menu .menu:hover .playlist {
+        display: block;
+
+    }
+
     .main-menu .slider {
         width: 100%;
     }
@@ -613,10 +615,12 @@ i {
 .humberger-menu-overlay {
     background-color: white;
     width: auto;
-    height: 800px;
+    height: 700px;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 10000;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .humberger_menu_wrapper {
@@ -624,9 +628,7 @@ i {
     display: none;
     transition: all 0.3s;
 }
-/* .bottom-header .fa-bars:hover .humberger-menu-wrapper{
-    display: block;
-} */
+
 .humberger_menu_nav {
     display: flex;
     align-items: center;
@@ -677,66 +679,212 @@ i {
     padding-bottom: 0.5rem;
     font-weight: bold;
 }
+
 /*categories*/
 .categories {
-padding: 2rem 0;
+    padding: 2rem 0;
 }
+
 .categories .wrapper {
-display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
-    justify-content: center;
+    justify-items: center;
+    align-items: center;
 }
-.categories .items{
-position: relative;
-height: 380px;
-background-position: top center;
-background-repeat: no-repeat;
-background-size: cover;
+
+.categories .items {
+    position: relative;
+    height: 270px;
+    width: 270px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
+
 .categories .slider1 {
-background-image: url(../img/categories/cat-1.jpg);
+    background-image: url(../img/categories/cat-1.jpg);
 }
+
 .categories .slider2 {
     background-image: url(../img/categories/cat-2.jpg);
 }
+
 .categories .slider3 {
     background-image: url(../img/categories/cat-3.jpg);
 }
+
 .categories .slider4 {
     background-image: url(../img/categories/cat-4.jpg);
 }
+
 .categories .slider5 {
     background-image: url(../img/categories/cat-5.jpg);
 }
+
 .categories .items h5 {
-position: absolute;
-bottom: 2px;
-width: 100%;
-text-align: center;
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    text-align: center;
 
 }
-.categories .items h5 a{
+
+.categories .items h5 a {
     color: var(--main-color);
     text-transform: uppercase;
     padding: 0.5rem 2rem;
     font-weight: bold;
-background-color: white;
+    background-color: white;
 }
+
 .main-title {
-text-align: center;
-text-transform: uppercase;
-padding: 1rem 0;
-position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    position: relative;
 }
+
 .main-title::after {
     content: "";
     position: absolute;
-    height: 3px;
-    width: 50px;
+    height: 4px;
+    width: 80px;
     text-align: center;
-    bottom: 3px;
-    left: 45%;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    margin: 0 auto;
     background-color: var(--main-color);
+}
+
+.Featured-Product .Featured-Product-ul {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Featured-Product .Featured-Product-ul li {
+    cursor: pointer;
+    position: relative;
+}
+
+.Featured-Product .Featured-Product-ul .Featured-Product-active::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    margin: 0 auto;
+    background-color: var(--main-color);
+}
+
+.Featured-Product .Featured-Product-ul .li:hover {
+    height: 3px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    margin: 0 auto;
+    background-color: var(--main-color);
+}
+
+.Featured-Product .Featured-Product-ul li a {
+    color: var(--secondary);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.Featured-main-Product {
+    padding: 2rem 0;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 4rem;
+    justify-items: center;
+    align-self: center;
+}
+
+.Featured-main-Product .product {
+    text-align: center;
+    position: relative;
+    height: 400px;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+.Featured-main-Product .product h4 a {
+    color: var(--secondary);
+    font-weight: normal;
+}
+
+.Featured-main-Product .product span {
+    font-weight: bold;
+    font-size: 1.2rem;
+
+}
+
+.Featured-main-Product .product:hover .icons-products {
+    display: flex;
+    transition: all 0.3s;
+    bottom: 30%;
+}
+
+.Featured-main-Product .product .icons-products {
+    position: absolute;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    left: 20%;
+    display: none;
+}
+
+.product .icons-products a {
+    background-color: white;
+    border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    width: 40px;
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    color: var(--main-color);
+    height: 40px;
+}
+
+.product .icons-products a i {
+    transition: all 0.3s;
+    transform: rotate(0);
+
+}
+
+.product .icons-products li:hover a {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.product .icons-products li:hover a i {
+    transition: all 0.3s;
+    transform: rotate(360deg);
+
+}
+
+.banner {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
 }
